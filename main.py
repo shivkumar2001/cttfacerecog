@@ -112,8 +112,8 @@ plt.show()
 database = {}
 
 print("\nUsing face recognition to divide the images to different folders\n")
-database["ca"] = img_to_encoding("images/ca1.jpg", FRmodel)
-database["sk"] = img_to_encoding("images/sk1.jpg", FRmodel)
+database["apj"] = img_to_encoding("images/apj1.jpg", FRmodel)
+database["msd"] = img_to_encoding("images/msd1.jpg", FRmodel)
 
 
 for key in database:
