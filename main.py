@@ -117,7 +117,7 @@ database["msd"] = img_to_encoding("images/msd1.jpg", FRmodel)
 
 
 for key in database:
-    path = "/content/CNFaceRecogProject/" + key
+    path = "/content/cttfacerecog/" + key
     os.mkdir(path) 
 
 def verify(image_path, identity, database, model):
@@ -133,13 +133,13 @@ def verify(image_path, identity, database, model):
     return door_open
 
 
-yourpath = '/content/CNFaceRecogProject/images'
+yourpath = '/content/cttfacerecog/images'
 
 
 for root, dirs, files in os.walk(yourpath, topdown=False):
   for name in files:
     print(name)
     for key in database:
-        if (verify('/content/CNFaceRecogProject/images/' + str(name), key, database, FRmodel)):
-            shutil.move('/content/CNFaceRecogProject/images/' + str(name), "/content/CNFaceRecogProject/" + key + "/")
+        if (verify('/content/cttfacerecog/images/' + str(name), key, database, FRmodel)):
+            shutil.move('/content/cttfacerecog/images/' + str(name), "/content/cttfacerecog/" + key + "/")
             break
